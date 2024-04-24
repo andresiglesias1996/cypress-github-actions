@@ -1,0 +1,12 @@
+{
+  "name": "Cypress-GitHub-Actions",
+  "version": "1.0.0",
+  "description": "Automatización de pruebas utilizando Cypress y GitHub Actions.",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "AndresI",
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  }
+}

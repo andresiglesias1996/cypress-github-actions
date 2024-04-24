@@ -1,0 +1,12 @@
+# Ignorar directorios de dependencias
+node_modules/
+
+# Ignorar archivos de resultados de pruebas y capturas de pantalla de Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Ignorar archivos y directorios generados automáticamente
+*.log
+.DS_Store
+# Ignorar archivo de configuración de variables de entorno 
+.env
