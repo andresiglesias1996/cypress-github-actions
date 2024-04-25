@@ -25,7 +25,5 @@ En el archivo de configuración de Cypress (`cypress.config.js`), se utiliza el 
 ## Github-Action
 Si desea evitar esto, tanto el `projectId` `como recordKeyse` pueden proporcionar como variables de entorno utilizando https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions.
  env:
-          # pass the Cypress Cloud record key as an environment variable
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # pass the project ID from the secrets through environment variable
-          CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  Cypress Cloud record key como variable `CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}`
+ Cypress Cloud project ID como variable `CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}`
