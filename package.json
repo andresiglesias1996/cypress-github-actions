@@ -10,7 +10,7 @@
     "dotenv": "^16.4.5"
   },
   "scripts": {
-    "test": "cypress run"
+       "start": "npx cypress run"
 }
 
 }
