@@ -4,7 +4,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   //Ingresar el Project Id cloud.cypress 
   projectId: process.env.CYPRESS_PROJECT_ID,
-
+  //Ingresar el APPLITOOLS_API_KEY 
+  APPLITOOLS_API_KEY: process.env.APPLITOOLS_API_KEY,
     
   e2e: {
     setupNodeEvents(on, config) {
@@ -12,3 +13,6 @@ module.exports = defineConfig({
     },
   },
 });
+
+
+require('@applitools/eyes-cypress')(module);

@@ -1,6 +1,8 @@
 name: Cypress Tests
 on:  
   push:
+    branches:
+      - main
   schedule:
     # Programa la ejecución de lunes a viernes a las 8 a.m.
     - cron: '0 8 * * 1-5'
@@ -39,3 +41,5 @@ jobs:
           # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          #APPLITOOLS API KEY
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
