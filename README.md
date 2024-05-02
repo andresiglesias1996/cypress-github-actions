@@ -1,11 +1,16 @@
 ﻿# Cypress GitHub Actions
-Este repositorio contiene un proyecto de automatización de pruebas utilizando Cypress y GitHub Actions, con integración adicional de Cypress Dashboard.
+Este repositorio contiene un proyecto de automatización de pruebas utilizando Cypress y GitHub Actions, con integración adicional de Cypress Dashboard y pruebas visuales con Applitools Eyes.
 
 ## Instalar Dependencias:
 Instala las dependencias del proyecto utilizando:
 ```
 npm install
 ```
+Configurar Applitools Eyes
+```
+npx eyes-setup
+```
+
 ## Ejecutar Pruebas Cypress Localmente
 Para ejecutar las pruebas Cypress localmente:
 #### Para ejecutar las pruebas en modo headless
@@ -28,13 +33,17 @@ En el archivo de configuración de Cypress (`cypress.config.js`), se utiliza el 
 
 1. En el archivo `.env` agregue el valor CYPRESS_PROJECT_ID= "tu_project_id_aqui"
 
+#### Configuración de Api keys
+1. En el archivo `.env` agregue el valor APPLITOOLS_API_KEY= "tu_api_key_aqui"
+
 ## Github-Action
 Si desea evitar esto, tanto el `projectId` `como recordKeyse` pueden proporcionar como variables de entorno utilizando [secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) .
 EL flujo de trabajo `cypress.yml` esta configurado
 ```yaml
  env:
- Cypress Cloud record key como variable `CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}`
- Cypress Cloud project ID como variable `CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}`
+ Cypress Cloud record key como variable `CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+ Cypress Cloud project ID como variable `CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+ APPLITOOLS API KEY como variable APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
 ```
 
 #### Configuración de ejecuciones.
