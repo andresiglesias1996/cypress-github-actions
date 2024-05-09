@@ -16,7 +16,7 @@ npm i -D cypress-image-diff-js cypress-image-diff-html-report
 ```
 El archivo `cypress-image-diff.config.js` tiene la configuracion basica con la configuracion del directorio y la tolerancia.
 
-### Imagenes Resultado del test
+### Artifacts Archivos resultado del test
 El flujo de trabajo de GitHub Actions esta configurado para que genere los artefactos necesarios, como las capturas de pantalla y video de Cypress. Esto permite obtener las iamgenes en caso de que se tenga la necesidad de ajutar una prueba o evaluarla.
 Obtener los artefactos: una vez que las pruebas han finalizado y se han generado los artefactos, puedes acceder a ellos desde la pestaña "Actions" en tu repositorio de GitHub. Busca el flujo de trabajo correspondiente y verás un enlace o pestaña "Artifacts" que te llevará donde puedes descargar  los archivos generados durante esa ejecución específica del flujo de trabajo.
 
