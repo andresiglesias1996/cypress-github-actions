@@ -34,13 +34,13 @@ jobs:
           # Records to Cypress Cloud 
           record: true
           parallel: true # Runs test in parallel using settings 
-      - name: Upload Cypress Screenshots   
+      - name: Upload Cypress Screenshots-${{ github.run_id }} # Nombre del artefacto con ID de ejecución   
         uses: actions/upload-artifact@v4
         if: always()
         with:
               name: cypress-screenshots
               path: cypress/screenshots/** # Ruta para las capturas de pantalla deseadas
-      - name: Upload Cypress Video
+      - name: Upload Cypress Video-${{ github.run_id }} # Nombre del artefacto con ID de ejecución
         uses: actions/upload-artifact@v4
         if: always()
         with:
