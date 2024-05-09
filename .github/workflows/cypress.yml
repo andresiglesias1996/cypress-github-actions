@@ -35,7 +35,7 @@ jobs:
           record: true
           parallel: true # Runs test in parallel using settings 
       - name: List screenshots folder
-        run: echo "Screenshots folder content:" && ls -R cypress/screenshots
+        run: echo "Screenshots folder content:" && ls -R
       - name: Upload Cypress Screenshots   
         uses: actions/upload-artifact@v4
         if: always()
