@@ -10,13 +10,11 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    # Runs tests in parallel with matrix strategy https://docs.cypress.io/guides/guides/parallelization
-    # https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
-    # Also see warning here https://github.com/cypress-io/github-action#parallel
+    # Runs tests in parallel with matrix strategy 
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
-        containers: [1] # Uses 2 parallel instances
+        containers: [2] # Uses 2 parallel instances
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,8 +36,6 @@ jobs:
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
           parallel: true # Runs test in parallel using settings 
-      - name: Obtener imagen
-        run: npx cypress-image-diff -u
       - name: Upload Cypress Screenshots   
         uses: actions/upload-artifact@v4
         if: always()
