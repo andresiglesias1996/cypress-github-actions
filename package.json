@@ -4,7 +4,6 @@
   "description": "Automatización de pruebas utilizando Cypress y GitHub Actions.",
   "author": "AndresI",
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.44.1",
     "cypress": "^13.8.1",
     "cypress-image-diff-html-report": "^2.1.2",
     "cypress-image-diff-js": "^2.1.4",
