@@ -39,7 +39,7 @@ jobs:
         if: always()
         with:
               name: cypress-screenshots
-              path: cypress/screenshots
+              path: cypress/screenshots/visual-test/comparison # Ruta específica para las capturas de pantalla deseadas
       - name: Upload Cypress Video
         uses: actions/upload-artifact@v4
         if: always()
