@@ -6,6 +6,8 @@ on:
   schedule:
     # Programa la ejecución de lunes a viernes a las 8 a.m.
     - cron: '0 8 * * 1-5'
+  workflow_dispatch: # Esto permite la ejecución manual
+
 
 jobs:
   cypress-run:
