@@ -6,6 +6,7 @@ on:
   schedule:
     # Programa la ejecución de lunes a viernes a las 8 a.m.
     - cron: '0 8 * * 1-5'
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -32,7 +33,15 @@ jobs:
           # Records to Cypress Cloud 
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
-          parallel: true # Runs test in parallel using settings          
+          parallel: true # Runs test in parallel using settings 
+
+          # Paso para subir los artefactos de las capturas de pantalla generadas por cypress-image-diff
+      - name: Upload Cypress image-diff screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-image-diff-screenshots
+          path: cypress-image-diff-screenshots # Ajusta la ruta según donde se almacenen tus capturas de pantalla
+          
         env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
           # in GitHub repo → Settings → Secrets → Actions
