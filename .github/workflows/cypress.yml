@@ -38,6 +38,8 @@ jobs:
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
           parallel: true # Runs test in parallel using settings 
+      - name: Obtener imagen
+        run: npx cypress-image-diff -u
       - name: Upload Cypress Screenshots   
         uses: actions/upload-artifact@v4
         if: always()
