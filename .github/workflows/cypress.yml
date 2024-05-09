@@ -46,6 +46,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
             name: cypress-image-diff-screenshots
-            path: cypress/cypress-image-diff-screenshots #Visual Testing
+            path: cypress/cypress-image-diff-screenshots\comparison #Visual Testing
             if-no-files-found: ignore
     
