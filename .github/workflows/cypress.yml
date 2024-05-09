@@ -47,5 +47,4 @@ jobs:
         with:
             name: cypress-image-diff-screenshots
             path: cypress/cypress-image-diff-screenshots\comparison #Visual Testing
-            if-no-files-found: ignore
-    
+           
