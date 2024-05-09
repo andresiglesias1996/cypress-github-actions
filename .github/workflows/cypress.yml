@@ -19,9 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
        # Ejecuta las pruebas de Cypress
-       steps:
-        - name: Set DISPLAY variable
-          run: |
+      - name: Set DISPLAY variable
+        run: |
             export DISPLAY=:0.0
             xrandr --output HDMI1 --mode 1920x1080 # Ajusta la resolución deseada
       
