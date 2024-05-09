@@ -1,6 +1,6 @@
 describe('Test Ejemplo', () => {
   it('Visual Testing', () => {
-    cy.visit('https://www.google.com');
+    cy.visit('https://www.genexus.com/es/productos/genexus-enterprise-ai');
 
     cy.wait(2000);
     // Intenta capturar una imagen de la página completa y compararla con un snapshot previamente guardado con el nombre 'home-page'
