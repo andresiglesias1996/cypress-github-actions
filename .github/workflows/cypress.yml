@@ -39,18 +39,10 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cypress-screenshots-${{ github.run_id }}
+          name: cypress-screenshots
             # Ruta para las capturas de pantalla deseadas
-          path:       |
-              cypress/screenshots/** 
-              cypress/cypress-image-diff-screenshots/** 
-      - name: Upload Cypress Video-${{ github.run_id }} # Nombre del artefacto con ID de ejecución
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-              name: cypress-videos-${{ github.run_id }}
-              path: cypress/videos
-          
+          path: cypress/cypress-image-diff-screenshots/** 
+        
     env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
           # in GitHub repo → Settings → Secrets → Actions
