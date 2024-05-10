@@ -35,14 +35,13 @@ jobs:
           record: true
           parallel: true # Runs test in parallel using settings 
           #Obtener artefactos
-      - name: Upload Cypress Screenshots-${{ github.run_id }} # Nombre del artefacto con ID de ejecución   
+      - name: Upload Cypress Screenshots-${{ github.run_id }}-${{ matrix.containers }} # Nombre del artefacto con ID de ejecución   
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cypress-screenshots-${{ github.run_id }} # Nombre del artefacto con ID de ejecución
+          name: cypress-screenshots-${{ github.run_id }}-${{ matrix.containers }} # Nombre del artefacto con ID de ejecución
             # Ruta para las capturas de pantalla deseadas
-          path: cypress/cypress-image-diff-screenshots/** 
-        
+          path: cypress/cypress-image-diff-screenshots/**    
     env:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
           # in GitHub repo → Settings → Secrets → Actions
