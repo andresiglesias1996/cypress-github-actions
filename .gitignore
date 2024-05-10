@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignorar archivos de resultados de pruebas y capturas de pantalla de Cypress
-#cypress/screenshots/
+cypress/screenshots/
 cypress/videos/
 
 # Ignorar archivos y directorios generados automáticamente
