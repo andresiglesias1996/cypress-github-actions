@@ -19,8 +19,8 @@ module.exports = defineConfig({
     viewportHeight: 800,
     viewportWidth: 1200,
   },
-  "screenshotOnRunFailure": true,
-  "video": true,
+  screenshotOnRunFailure: true,
+  video: true,
 });
 
 

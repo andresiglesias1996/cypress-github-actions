@@ -4,7 +4,7 @@ const config = {
     failureThresholdType: 'percent', // Indica que el umbral es un porcentaje
      //dónde se guardan todas las capturas de pantalla
     ROOT_DIR: 'cypress',
-  SCREENSHOTS_DIR: 'screenshots'
+  //SCREENSHOTS_DIR: 'screenshots'
   };
   
   module.exports = config;
